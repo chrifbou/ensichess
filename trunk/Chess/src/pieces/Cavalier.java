@@ -10,7 +10,7 @@ public class Cavalier extends Piece {
 
 	public Cavalier(int h, int k, int c) {
 		super(h, k, c);
-
+		type=Piece.CAVALIER;
 	}
 
 

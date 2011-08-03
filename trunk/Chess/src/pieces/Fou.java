@@ -10,6 +10,7 @@ public class Fou extends Piece {
 
 	public Fou(int a, int b, int c) {
 		super(a, b, c);
+		type=Piece.FOU;
 	}
 
 	@Override

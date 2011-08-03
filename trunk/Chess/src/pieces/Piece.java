@@ -8,6 +8,7 @@ public abstract class Piece {
 
 	private int i;
 	private int j;
+	protected int type;
 	private int couleur;
 	public int getI() {
 		return i;
@@ -57,4 +58,10 @@ public abstract class Piece {
 	
 	public static int COULEUR_NOIRE=0;
 	public static int COULEUR_BLANCHE=1;
+	public static int ROI=0;
+	public static int DAME=1;
+	public static int FOU=2;
+	public static int CAVALIER=3;
+	public static int TOUR=4;
+	public static int PION=5;
 }
