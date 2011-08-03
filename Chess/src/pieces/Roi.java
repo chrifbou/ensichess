@@ -9,7 +9,8 @@ public class Roi extends Piece {
 
 	public Roi(int h, int k,int c) {
 		super(h, k, c);
-		// TODO Auto-generated constructor stub
+		type=Piece.ROI;
+	
 	}
 
 	

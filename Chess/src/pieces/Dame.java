@@ -10,7 +10,7 @@ public class Dame extends Piece {
 
 	public Dame(int h, int k, int c) {
 		super(h, k, c);
-	
+		type=Piece.DAME;
 	}
 	
 

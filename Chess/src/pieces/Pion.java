@@ -8,7 +8,7 @@ public class Pion extends  Piece{
 
 	public Pion(int h, int k,int c) {
 		super(h, k, c);
-		// TODO Auto-generated constructor stub
+		type=Piece.PION;
 	}
 
 	@Override

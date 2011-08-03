@@ -10,6 +10,7 @@ public class Tour extends Piece {
 
 	public Tour(int h, int k, int c) {
 		super(h, k, c);
+		type=Piece.TOUR;
 	}
 
 
