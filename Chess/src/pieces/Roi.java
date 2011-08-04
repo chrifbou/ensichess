@@ -13,6 +13,10 @@ public class Roi extends Piece {
 	
 	}
 
+	public void affiche(){
+		System.out.print("Roi : ");
+		super.affiche();
+	}
 	
 	
 
