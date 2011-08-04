@@ -49,19 +49,24 @@ public abstract class Piece {
 	public void move(Table T,Pair p){
 		ArrayList<Pair> liste= this.possibles(T);
 		if (liste.contains(p)){
-			T.setPos(p.i,p.j,this);
-			T.setPos(i, j, null);
+			//T.setPos(p.i,p.j,this);
+			//T.setPos(i, j, null);
+			//T.getPos(p.i, p.j);
+		
 			i=p.i;
 			j=p.j;
 		}
 	}
 	
-	public static int COULEUR_NOIRE=0;
-	public static int COULEUR_BLANCHE=1;
+	public static int COULEUR_NOIRE=1;
+	public static int COULEUR_BLANCHE=0;
 	public static int ROI=0;
 	public static int DAME=1;
 	public static int FOU=2;
 	public static int CAVALIER=3;
 	public static int TOUR=4;
 	public static int PION=5;
+	public int getType(){
+		return type;
+	}
 }
