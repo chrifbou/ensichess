@@ -52,7 +52,7 @@ public abstract class Piece {
 			//T.setPos(p.i,p.j,this);
 			//T.setPos(i, j, null);
 			//T.getPos(p.i, p.j);
-		
+			T.supprimer(p.i,p.j);
 			i=p.i;
 			j=p.j;
 		}
