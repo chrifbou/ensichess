@@ -66,7 +66,7 @@ public abstract class Piece {
 	public static int CAVALIER=3;
 	public static int TOUR=4;
 	public static int PION=5;
-	//essai changement
+	//changemt par achraf a 15:42
 	public int getType(){
 		return type;
 	}
