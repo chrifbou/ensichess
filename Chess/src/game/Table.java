@@ -34,4 +34,12 @@ public boolean mat(int couleur){
 	
 }
 
+public void supprimer(int i, int j) {
+	for (int l = 0; l<32;l++){
+		if ((pieces[l].getI()==i)&&(pieces[l].getJ()==j))
+			pieces[l]=null;
+		break;
+	}
+}
+
 }
