@@ -36,11 +36,14 @@ public abstract class Piece {
 		j=k;
 		couleur=c;
 	}
-	public void affiche() {
+	public void affichePoss(game.Table T) {
 		ArrayList<Pair> d=new ArrayList<Pair>();
-		//d=this.possibilitees();
+		d=this.possibles(T);
 		for(int i=0;i<d.size();i++)
 		System.out.println(d.get(i).i+"  "+d.get(i).j);
+	}
+	public void affiche(){
+		System.out.print(i+" , "+j+"\n");
 	}
 	public Piece(){
 		i=0;j=0;
@@ -66,7 +69,7 @@ public abstract class Piece {
 	public static int CAVALIER=3;
 	public static int TOUR=4;
 	public static int PION=5;
-	//changemt par achraf a 15:42
+	
 	public int getType(){
 		return type;
 	}

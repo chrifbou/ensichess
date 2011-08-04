@@ -13,7 +13,10 @@ public class Cavalier extends Piece {
 		type=Piece.CAVALIER;
 	}
 
-
+	public void affiche(){
+		System.out.print("Cavalier: ");
+		super.affiche();
+	}
 
 	@Override
 	public ArrayList<Pair> possibles(Table T) {
