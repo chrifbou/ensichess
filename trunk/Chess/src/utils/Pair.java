@@ -1,15 +1,17 @@
 package utils;
 
+import utils.Pair;
+
 public class Pair {
 	public int i;
 	public int j;
-	public Pair(int h,int k){
-		i=h;
-		j=k;
+	public Pair(int k,int l){
+		i=k;
+		j=l;
 	};
-	private boolean equals(Pair P,int i){
+	private boolean equals(Pair P,int k){
 		return ((P.i==this.i)&&(P.j==this.j));
-		
+		// a koi ser ce i passe en parametre
 	}
 @Override
 	public boolean equals(Object O){
