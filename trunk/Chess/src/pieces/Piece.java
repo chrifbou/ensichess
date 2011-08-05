@@ -54,14 +54,11 @@ public abstract class Piece {
 	public void move(Table T,Pair p){
 		ArrayList<Pair> liste= this.possibles(T);
 		if (liste.contains(p)){
-			//T.setPos(p.i,p.j,this);
-			//T.setPos(i, j, null);
-			//T.getPos(p.i, p.j);
 			T.supprimer(p.i,p.j);
 			i=p.i;
 			j=p.j;
-			//mise a jour du tableau pieces
 		}
+		else System.out.println("Deplacement impossible!");
 	}
 	
 	public static int COULEUR_NOIRE=1;
