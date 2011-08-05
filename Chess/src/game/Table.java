@@ -4,7 +4,7 @@ import pieces.*;
 import utils.Pair;
 
 public class Table {
-private Piece[] pieces=new Piece[32];  //un tableau qui contient les pieces
+public static Piece[] pieces=new Piece[32];  //un tableau qui contient les pieces
 
 public Piece getPos(int i,int j){
 	for (int l = 0; l<32;l++){

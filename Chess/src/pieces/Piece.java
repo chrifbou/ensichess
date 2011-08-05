@@ -31,19 +31,21 @@ public abstract class Piece {
 	
 	public abstract ArrayList<Pair> possibles(game.Table T);
 		
-	public Piece(int h,int k,int c){
-		i=h;
-		j=k;
+	public Piece(int i2,int j2,int c){
+		i=i2;
+		j=j2;
 		couleur=c;
 	}
 	public void affichePoss(game.Table T) {
 		ArrayList<Pair> d=new ArrayList<Pair>();
 		d=this.possibles(T);
-		for(int i=0;i<d.size();i++)
+		for(byte i=0;i<d.size();i++)
 		System.out.println(d.get(i).i+"  "+d.get(i).j);
 	}
 	public void affiche(){
-		System.out.print(i+" , "+j+"\n");
+		if(this.getCouleur()==1)
+		System.out.print("noir "+i+" , "+j+"\n");
+		else System.out.print("blanc "+i+" , "+j+"\n");
 	}
 	public Piece(){
 		i=0;j=0;
@@ -58,6 +60,7 @@ public abstract class Piece {
 			T.supprimer(p.i,p.j);
 			i=p.i;
 			j=p.j;
+			//mise a jour du tableau pieces
 		}
 	}
 	
