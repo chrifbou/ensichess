@@ -23,22 +23,23 @@ public class Roi extends Piece {
 		ArrayList<Pair> p = new ArrayList<Pair>();
 		int i = this.getI();
 		int j = this.getJ();
+		int c=this.getCouleur();
 		if(i>0){
-			p.add(new Pair(i-1,j));
-			if(j<7) p.add(new Pair(i-1,j+1));
-			if(j>0) p.add(new Pair(i-1,j-1));
+			if(c!=T.getPos(i-1,j).getCouleur()) p.add(new Pair(i-1,j));
+			if(j<7 && c!=T.getPos(i-1,j+1).getCouleur()) p.add(new Pair(i-1,j+1));
+			if(j>0 && c!=T.getPos(i-1,j-1).getCouleur()) p.add(new Pair(i-1,j-1));
 		}
 		if(i<7){
-			p.add(new Pair(i+1,j));
-			if(j<7) p.add(new Pair(i+1,j+1));
-			if(j>0) p.add(new Pair(i+1,j-1));
+			if(c!=T.getPos(i+1,j).getCouleur())p.add(new Pair(i+1,j));
+			if(j<7 && c!=T.getPos(i+1,j+1).getCouleur()) p.add(new Pair(i+1,j+1));
+			if(j>0 && c!=T.getPos(i+1,j-1).getCouleur()) p.add(new Pair(i+1,j-1));
 		}
-		if(j<7) p.add(new Pair(i,j+1));
-		if(j>0) p.add(new Pair(i,j-1));
-		//verifier si j'ai utilise i et j ou nn
-		i=16*this.getCouleur();
-		while(i<16+16*this.getCouleur() && p.isEmpty()==false){
-			ArrayList<Pair> pa=Table.pieces[this.getCouleur()].possibles(T);
+		if(j<7 && c!=T.getPos(i,j+1).getCouleur()) p.add(new Pair(i,j+1));
+		if(j>0 && c!=T.getPos(i,j-1).getCouleur()) p.add(new Pair(i,j-1));
+		
+		i=16*c;
+		while(i<16+16*c && p.isEmpty()==false){
+			ArrayList<Pair> pa=T.pieces[c].possibles(T);
 			for(j=0;j<pa.size();j++) if(p.contains(pa.get(j))) {
 				boolean test=true;
 				byte k=0;
