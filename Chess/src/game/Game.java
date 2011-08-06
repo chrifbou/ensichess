@@ -1,31 +1,7 @@
 package game;
 
 import utils.Pair;
-
-public class Game {
-
-	/**
-	 * @param args
-	 */
-	public static void main(String[] args) {
-		Table T =new Table();
-		
-		T.affiche();
-		System.out.println();
-		T.supprimer(7,1);
-		T.supprimer(5, 0);
-		T.supprimer(6, 0);
-		T.getPos(7, 0).affichePoss(T);
-		T.getPos(7, 0).move(T, new Pair(7,3));
-		T.getPos(7, 3).affichePoss(T);
-		//*/
-	}
-
-}
-package game;
-
-import utils.Pair;
-
+import pieces.*;
 public class Game {
 
 	/**
@@ -33,14 +9,25 @@ public class Game {
 	 */
 	public static void main(String[] args) {
 		Table T=new Table();
-		T.affiche();
+		
+		
+		
+		
 		System.out.println();
-		T.supprimer(7,1);
-		T.supprimer(5, 0);
-		T.supprimer(6, 0);
-		//T.getPos(7, 0).affichePoss(T);
-		T.getPos(7, 0).move(T, new Pair(7,3));
-		T.getPos(7, 3).affichePoss(T);
+		T.supprimer(3,1);
+		T.supprimer(3, 6);
+		//T.supprimer(4, 0);
+		T.getPos(4, 7).move(T, new Pair(3,6));
+		//T.getPos(3, 6).move(T, new Pair(3,1));
+		
+		//T.getPos(4, 7).move(T, new Pair(3,6));
+		//T.getPos(3, 6).affichePoss(T);
+		//T.getPos(1,0).affichePoss(T);
+		//T.affiche();
+		
+		System.out.println(T.echecEtMate(Piece.COULEUR_BLANCHE));
+		System.out.println(T.echecEtMate(Piece.COULEUR_NOIRE));
+		
 		
 	}
 
