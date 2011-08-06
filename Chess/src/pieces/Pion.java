@@ -26,8 +26,10 @@ public class Pion extends  Piece{
 			if(T.getPos(i,j+1)==null){
 			P.add(new Pair(i, j+1));
 			}
-			if ((T.getPos(i, j+2)==null)&&(! moved))
+			if ((T.getPos(i, j+2)==null)&&(! moved)){
 				P.add(new Pair(i,j+2));
+				moved=true;
+				}
 			if ((T.getPos(i+1,j+1)!=null)&& (T.getPos(i+1,j+1).getCouleur()==Piece.COULEUR_BLANCHE))
 				P.add(new Pair(i+1,j+1));
 			
