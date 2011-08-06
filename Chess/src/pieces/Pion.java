@@ -5,10 +5,11 @@ import java.util.ArrayList;
 import utils.Pair;
 
 public class Pion extends  Piece{
-
+	private boolean moved;
 	public Pion(int h, int k,int c) {
 		super(h, k, c);
 		type=Piece.PION;
+		moved=false;
 	}
 
 	public void affiche(){
@@ -21,9 +22,12 @@ public class Pion extends  Piece{
 		int i=this.getI(); int j= this.getJ();
 		if (this.getCouleur()==Piece.COULEUR_NOIRE)//noir
 		{
+			
 			if(T.getPos(i,j+1)==null){
 			P.add(new Pair(i, j+1));
 			}
+			if ((T.getPos(i, j+2)==null)&&(! moved))
+				P.add(new Pair(i,j+2));
 			if ((T.getPos(i+1,j+1)!=null)&& (T.getPos(i+1,j+1).getCouleur()==Piece.COULEUR_BLANCHE))
 				P.add(new Pair(i+1,j+1));
 			
