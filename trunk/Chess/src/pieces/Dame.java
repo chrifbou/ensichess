@@ -73,6 +73,17 @@ public class Dame extends Piece {
 			if (T.getPos(i - k, j + k) != null) {
 				if (T.getPos(i - k, j + k).getCouleur() != this.getCouleur())
 					P.add(new Pair(i - k, j + k));
+<<<<<<< .mine
+				break ;
+			} else
+				P.add(new Pair(i - k, j + k));
+
+		} // fin diagonale vers le haut gauche
+
+		for (int k = 1; (i + k < 8) && (j - k >= 0); k++) { // diagonale vers le
+															// bas droite
+			if (T.getPos(i + k, j - k) != null) {
+=======
 				break;
 			} else
 				P.add(new Pair(i - k, j + k));
@@ -82,9 +93,20 @@ public class Dame extends Piece {
 		for (int k = 1; (i + k < 8) && (j - k >= 0); k++) { // diagonale vers le
 															// bas droite
 			if (T.getPos(i + k, j - k) != null) {
+>>>>>>> .r16
 				if (T.getPos(i + k, j - k).getCouleur() != this.getCouleur())
 					P.add(new Pair(i + k, j - k));
 				break;
+<<<<<<< .mine
+			} else
+				P.add(new Pair(i + k, j - k));
+
+		} // fin diagonale vers le bas droite
+
+		for (int k = 1; (i - k >= 0) && (j - k >= 0); k++) { // diagonale vers
+																// le bas gauche
+			if (T.getPos(i - k, j - k) != null) {
+=======
 			} else
 				P.add(new Pair(i - k, j + k));
 
@@ -93,6 +115,7 @@ public class Dame extends Piece {
 		for (int k = 1; (i - k >= 0) && (j - k >= 0); k++) { // diagonale vers
 																// le bas gauche
 			if (T.getPos(i - k, j - k) != null) {
+>>>>>>> .r16
 				if (T.getPos(i - k, j - k).getCouleur() != this.getCouleur())
 					P.add(new Pair(i - k, j - k));
 				break;
